@@ -1,4 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@media (max-width: 1200px) {
+  #illustration {
+    overflow: visible;
+  }
+  #illustration #pattern {
+    scale: 0.5;
+    top: -250px;
+  }
+  #illustration #woman {
+    top: 50%;
+    left: 180px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  body {
+    overflow: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  #illustration {
+    overflow: hidden;
+  }
+  #illustration #pattern {
+    scale: 1;
+    left: -570px;
+    top: -250px;
+  }
+  #illustration #woman {
+    top: 50%;
+    left: -80px;
+  }
+}
 * {
   font-family: "Kumbh Sans", sans-serif;
   box-sizing: border-box;
@@ -11,102 +46,96 @@ html {
 }
 
 body {
-  overflow: hidden;
   background: #6565e7;
-  background: -moz-linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
-  background: -webkit-linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
-  background: linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6565e7",endColorstr="#af67e9",GradientType=1);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: -moz-linear-gradient(0deg, #6565e7 0%, #aa66e8 90%);
+  background: -webkit-linear-gradient(0deg, #6565e7 0%, #aa66e8 90%);
+  background: linear-gradient(0deg, #6565e7 0%, #aa66e8 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6565e7",endColorstr="#aa66e8",GradientType=1);
 }
 
 main {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: relative;
   background: white;
-  border-radius: 20px;
-  margin: 10% auto;
-  padding: 2rem 1rem;
-  width: 80%;
-  height: auto;
-  min-height: 600px;
-}
-main h1 {
-  font-size: 50px;
-  margin: 0 0 2rem 0;
-}
-main p {
-  color: #4a4b5e;
-}
-
-#accordion {
-  position: absolute;
-  right: 5%;
   display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-  padding: 1rem;
-  width: 50%;
-}
-
-.question-tab {
-  position: relative;
-  margin: 5px 0;
-  padding: 5px;
-}
-
-.question-line {
-  display: flex;
-}
-
-.answer {
-  background: white;
-}
-
-.hidden {
-  display: none;
-}
-
-.arrow-down {
   position: absolute;
-  right: 10px;
-  width: 15px;
-  height: 10px;
-}
-
-hr {
-  border: none;
-  height: 1px;
-  background: rgba(128, 128, 128, 0.7);
-  margin: 10px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 500px;
+  min-width: 1000px;
+  box-shadow: 0px 50px 150px rgba(51, 51, 51, 0.3);
+  border-radius: 30px;
+  height: 60%;
 }
 
 #illustration {
-  height: 100%;
+  user-select: none;
+  border-radius: 30px;
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+#illustration #woman {
   position: absolute;
-  left: 0;
+  z-index: 1;
+  transform: translate(0, -50%);
+}
+#illustration #pattern {
+  position: absolute;
+  z-index: 0;
 }
 
 #box {
   position: absolute;
-  left: -90px;
-  z-index: 3;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  user-select: none;
 }
 
-#woman {
-  position: absolute;
-  z-index: 2;
-  top: 20%;
+#accordion {
+  flex: 1;
+  margin: auto 5rem;
+}
+#accordion h1 {
+  user-select: none;
+  font-size: 40px;
+  margin: 0 0 1rem 0;
+}
+#accordion h5 {
+  user-select: none;
+  margin: 1.5rem 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+#accordion p {
+  font-weight: 300;
 }
 
-#pattern {
+.question-tab hr {
+  height: 1px;
+  border: none;
+  background: #ececec;
+}
+
+.question-line {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.answer {
+  margin: 1rem 0;
+}
+
+.arrow-down {
   position: absolute;
-  z-index: 1;
-  top: -180px;
-  left: -500px;
+  right: 20px;
+  width: auto;
+  height: 8px;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

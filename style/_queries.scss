@@ -1,0 +1,34 @@
+@media (max-width: 1200px){
+      #illustration{
+            overflow: visible;
+            #pattern{
+                  scale:.5;
+                  top:-250px;
+            }
+            #woman{
+                  top:50%;
+                  left:180px;
+            }
+      }
+      main{
+            flex-direction:column;
+      }
+      body{
+            overflow:hidden;
+      }
+}
+
+@media (min-width:1200px){
+      #illustration{
+            overflow: hidden;
+            #pattern{
+                  scale:1;
+                  left:-570px;
+                  top:-250px;
+            }
+            #woman{
+                  top:50%;
+                  left:-80px;
+            }
+      }
+      }
