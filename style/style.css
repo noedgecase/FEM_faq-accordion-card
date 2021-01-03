@@ -90,7 +90,8 @@ main {
 }
 #accordion p {
   font-weight: 300;
-  color: black;
+  color: #474747;
+  transition: 0.2s;
 }
 
 .question-tab hr {
