@@ -17,6 +17,7 @@ $grayishBlue: #787887;
 
 html{
       height:100%;
+      font-size:100%;
 }
 
 body{
@@ -79,7 +80,6 @@ main{
       transition: .2s;
 }
 
-
 #accordion{
       flex:1;
       z-index:0;
@@ -107,6 +107,10 @@ main{
 }
 
 .question-tab{
+      margin:0 0 .5rem 0;
+      &:hover{
+            cursor:pointer;
+      }
       hr{
             height:1px;
             border:none;

@@ -8,6 +8,7 @@
 
 html {
   height: 100%;
+  font-size: 100%;
 }
 
 body {
@@ -94,6 +95,12 @@ main {
   transition: 0.2s;
 }
 
+.question-tab {
+  margin: 0 0 0.5rem 0;
+}
+.question-tab:hover {
+  cursor: pointer;
+}
 .question-tab hr {
   height: 1px;
   border: none;
@@ -127,7 +134,7 @@ main {
   }
 
   main {
-    top: 50%;
+    top: 55%;
     right: 0;
     left: 0;
     margin-left: auto;
