@@ -26,7 +26,6 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-height: 500px;
   width: 65%;
   box-shadow: 0px 50px 150px rgba(51, 51, 51, 0.3);
   border-radius: 30px;
@@ -134,15 +133,11 @@ main {
   }
 
   main {
-    top: 55%;
-    right: 0;
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
     width: 60%;
     height: 50%;
-    flex-direction: column;
-    transform: translate(0, -50%);
+    min-height: 430px;
   }
 
   #box {
@@ -174,7 +169,7 @@ main {
   }
 
   #accordion {
-    flex: 5;
+    flex: 2;
     margin: auto 1rem 3rem 1rem;
   }
   #accordion h1 {
@@ -189,28 +184,18 @@ main {
   }
 }
 @media (max-width: 600px) {
-  html {
-    height: 100%;
-    overflow: hidden;
-  }
-
   main {
     top: 55%;
-    right: 0;
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
     width: 90%;
-    height: 100px;
+    height: 70%;
     flex-direction: column;
-    transform: translate(0, -50%);
   }
 
   #box {
     left: 50%;
     top: -20px;
-    transform: translate(-130%, -30%);
-    width: 25%;
+    transform: translate(-140%, -30%);
+    width: 20%;
     transition: 0.2s;
   }
 
@@ -223,14 +208,14 @@ main {
     left: 50%;
     top: -20px;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 50%;
     transition: 0.2s;
   }
   #illustration #woman {
     left: 50%;
     top: -20px;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 50%;
     transition: 0.2s;
   }
 
@@ -254,7 +239,7 @@ main {
   }
 
   .arrow-down {
-    bottom: 5px;
+    bottom: 2px;
     left: 50%;
     transform: translate(-50%, 0);
   }
