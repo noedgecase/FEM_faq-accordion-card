@@ -101,9 +101,6 @@ main {
 .question-tab {
   margin: 0 0 0.5rem 0;
 }
-.question-tab:hover {
-  cursor: pointer;
-}
 .question-tab hr {
   height: 1px;
   border: none;
@@ -115,9 +112,13 @@ main {
   display: flex;
   align-items: center;
 }
+.question-line:hover {
+  cursor: pointer;
+}
 
 .answer {
   margin: 1rem 0;
+  transition: 0.2s;
 }
 
 .hidden {
