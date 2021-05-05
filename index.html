@@ -12,84 +12,106 @@
     <link rel="stylesheet" href="./style/style.css" />
     <title>FAQ Accordion Card</title>
   </head>
-
   <body>
     <main>
-      <img id="box" src="./images/illustration-box-desktop.svg" alt="" />
+      <div class="card">
+        <!-------------- ILLUSTRATION --------------->
+        <div class="card__illustration">
+          <svg class="box" id="illustration-box-desktop" role="img">
+            <use xlink:href="sprite.svg#illustration-box-desktop"></use>
+          </svg>
+          <div class="cutout-box">
+            <svg
+              class="woman"
+              id="illustration-woman-online-desktop"
+              role="img"
+            >
+              <use
+                xlink:href="sprite.svg#illustration-woman-online-desktop"
+              ></use>
+            </svg>
+            <svg class="woman" id="illustration-woman-online-mobile" role="img">
+              <use
+                xlink:href="sprite.svg#illustration-woman-online-mobile"
+              ></use>
+            </svg>
+            <svg class="bg" id="bg-pattern-desktop" role="img">
+              <use xlink:href="sprite.svg#bg-pattern-desktop"></use>
+            </svg>
+            <svg class="bg" id="bg-pattern-mobile" role="img">
+              <use xlink:href="sprite.svg#bg-pattern-mobile"></use>
+            </svg>
+          </div>
+        </div>
 
-      <div id="illustration">
-        <img
-          id="woman"
-          src="./images/illustration-woman-online-desktop.svg"
-          alt=""
-        />
-        <img id="pattern" src="./images/bg-pattern-desktop.svg" alt="" />
+        <!----------------- QUESTIONS ------------------>
+        <div class="card__questions">
+          <h1>FAQ</h1>
+          <div class="questions">
+            <div class="question-tab">
+              <div class="question">
+                <h3>How many team members can I invite?</h3>
+                <svg class="icon" role="icon">
+                  <use xlink:href="sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
+              <p>
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </div>
+            <div class="question-tab opened">
+              <div class="question">
+                <h3>What is the maximum file upload size?</h3>
+                <svg class="icon" role="icon">
+                  <use xlink:href="sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
+              <p>
+                No more than 2GB. All files in your account must fit your
+                alloted storage space.
+              </p>
+            </div>
+            <div class="question-tab">
+              <div class="question">
+                <h3>How do I reset my password?</h3>
+                <svg class="icon" role="icon">
+                  <use xlink:href="sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
+              <p>
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </div>
+            <div class="question-tab">
+              <div class="question">
+                <h3>Can I cancel my subscribtion?</h3>
+                <svg class="icon" role="icon">
+                  <use xlink:href="sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
+              <p>
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </div>
+            <div class="question-tab last-tab">
+              <div class="question">
+                <h3>Do you provide additional support?</h3>
+                <svg class="icon" role="icon">
+                  <use xlink:href="sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
+              <p>
+                Chat and email support is available 24/7. Phone lines are open
+                during norml business hours.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <section id="accordion">
-        <h1>FAQ</h1>
-
-        <div class="question-tab">
-          <div class="question-line">
-            <h5>How many team members can I invite?</h5>
-            <img class="arrow-down" src="./images/icon-arrow-down.svg" alt="" />
-          </div>
-          <p class="answer hidden">
-            You can invite up to 2 additional users on the Free plan. There is
-            no limit on team members for the Premium plan.
-          </p>
-          <hr />
-        </div>
-
-        <div class="question-tab">
-          <div class="question-line">
-            <h5>What is the maximum file upload size?</h5>
-            <img class="arrow-down" src="./images/icon-arrow-down.svg" alt="" />
-          </div>
-          <p class="answer hidden">
-            No more than 2GB. All files in your account must fit your alloted
-            storage space.
-          </p>
-          <hr />
-        </div>
-
-        <div class="question-tab">
-          <div class="question-line">
-            <h5>How do I reset my password?</h5>
-            <img class="arrow-down" src="./images/icon-arrow-down.svg" alt="" />
-          </div>
-          <p class="answer hidden">
-            Click “Forgot password” from the login page or “Change password”
-            from your profile page. A reset link will be emailed to you.
-          </p>
-          <hr />
-        </div>
-
-        <div class="question-tab">
-          <div class="question-line">
-            <h5>Can I cancel my subscription?</h5>
-            <img class="arrow-down" src="./images/icon-arrow-down.svg" alt="" />
-          </div>
-          <p class="answer hidden">
-            Yes! Send us a message and we’ll process your request no questions
-            asked.
-          </p>
-          <hr />
-        </div>
-
-        <div class="question-tab">
-          <div class="question-line">
-            <h5>Do you provide additional support?</h5>
-            <img class="arrow-down" src="./images/icon-arrow-down.svg" alt="" />
-          </div>
-          <p class="answer hidden">
-            Chat and email support is available 24/7. Phone lines are open
-            during norml business hours.
-          </p>
-          <hr />
-        </div>
-      </section>
     </main>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
