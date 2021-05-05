@@ -1,163 +1,197 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+// ============= PALETTE ==============
+$darkGrayishBlue: hsl(237, 12%, 33%);
+$darkDesaturatedBlue: hsl(238, 29%, 16%);
+$grayishBlue: hsl(240, 6%, 50%);
+$softRed: hsl(14, 88%, 65%);
+// ====================================
 
-$desaturatedBlue: #1d1e35;
-$softRed: #f47c57;
-$lightBlue: hsl(240, 5%, 91%);
-$softViolet: #af67e9;
-$softBlue: #6565e7;
-$darkBlue: hsl(237, 12%, 33%);
-$grayishBlue: #787887;
+@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans:300,regular,700);
 
 * {
-  font-family: 'Kumbh Sans', sans-serif;
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 html {
-  height: 100%;
-  font-size: 100%;
+  font-size: 16px;
 }
 
-body {
+main {
+  display: grid;
+  place-items: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   background: rgb(101, 101, 231);
   background: -moz-linear-gradient(
     0deg,
     rgba(101, 101, 231, 1) 0%,
-    rgba(170, 102, 232, 1) 90%
+    rgba(175, 103, 233, 1) 100%
   );
   background: -webkit-linear-gradient(
     0deg,
     rgba(101, 101, 231, 1) 0%,
-    rgba(170, 102, 232, 1) 90%
+    rgba(175, 103, 233, 1) 100%
   );
   background: linear-gradient(
     0deg,
     rgba(101, 101, 231, 1) 0%,
-    rgba(170, 102, 232, 1) 90%
+    rgba(175, 103, 233, 1) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6565e7",endColorstr="#aa66e8",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6565e7",endColorstr="#af67e9",GradientType=1);
 }
 
-main {
-  // padding: 1rem 0;
-  position: absolute;
+// ======================================
+// ============= MAIN CARD ==============
+// ======================================
+.card {
   display: flex;
-  background: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  // min-height:500px;
-  width: 65%;
-  box-shadow: 0px 50px 150px rgba(51, 51, 51, 0.3);
-  border-radius: 30px;
-  // height:60%;
-  min-height: 490px;
-  transition: 0.2s;
+  background-color: white;
+  width: clamp(300px, 80%, 70em);
+  border-radius: 1.6em;
 }
 
-#illustration {
+// =======================================
+// =============== FAQ SIDE ==============
+// =======================================
+.card__questions {
   flex: 1;
-  z-index: 1;
-  position: relative;
-  user-select: none;
-  border-radius: 30px;
-  overflow: hidden;
-  align-items: center;
-  transition: 0.2s;
-  // background:rgba(0, 255, 0, .5);
-  #woman {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: -80px;
-    transform: translate(0, -50%);
-    transition: 0.2s;
-  }
-  #pattern {
-    position: absolute;
-    z-index: 0;
-    scale: 1;
-    left: -570px;
-    top: -250px;
-    transition: 0.2s;
-  }
-}
-
-#box {
-  position: absolute;
-  top: 55%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  user-select: none;
-  transition: 0.2s;
-}
-
-#accordion {
-  flex: 1;
-  z-index: 0;
-  position: relative;
-  margin: auto 3rem;
-  transition: 0.2s;
-  // background:rgba(128, 128, 128, .1);
+  padding: 2em;
   h1 {
-    user-select: none;
-    font-size: 40px;
-    margin: 0 0 1rem 0;
-  }
-  h5 {
-    user-select: none;
-    margin: 1rem 0;
-    font-size: 16px;
-    font-weight: 300;
-    color: #414141;
-    &:hover {
-      color: $desaturatedBlue;
-    }
-  }
-  p {
-    padding: 0 4rem 0 0;
-    // text-align: center;
-    font-weight: 300;
-    color: rgba(71, 71, 71, 0.8);
+    color: $darkDesaturatedBlue;
+    margin: 0.5em 0;
   }
 }
 
 .question-tab {
-  margin: 0 0 0.5rem 0;
-
-  hr {
-    height: 1px;
-    border: none;
-    background: #ececec;
+  max-height: 4em;
+  transition: max-height 300ms;
+  border-bottom-width: 2px;
+  border-bottom-color: hsla(0, 0%, 50%, 0.1);
+  border-bottom-style: solid;
+  overflow: hidden;
+  p {
+    font-weight: 400;
+    color: $grayishBlue;
+    margin: 1em 0;
+    max-width: 35ch;
+    opacity: 0;
+    transition: opacity 200ms;
   }
 }
 
-.question-line {
-  position: relative;
+.last-tab {
+  border: none !important;
+}
+
+.opened {
+  max-height: 10em !important;
+  .question {
+    h3 {
+      font-weight: bold;
+    }
+    svg {
+      top: 3em;
+      transform: rotate(-180deg);
+      transition: transform 350ms ease, top 350ms ease;
+    }
+  }
+  p {
+    opacity: 1;
+    transition: opacity 200ms;
+  }
+}
+
+.question {
+  margin: 1em 0;
+  user-select: none;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  // background:burlywood;
+  // margin: 1.5em 0;
+  h3 {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    color: $darkGrayishBlue;
+    font-weight: 500;
+  }
   &:hover {
     cursor: pointer;
   }
 }
 
-.answer {
-  margin: 1rem 0;
-  transition: 0.2s;
+// =====================================
+// ========= ILLUSTRATION SIDE =========
+// =====================================
+.card__illustration {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  position: relative;
 }
 
-.hidden {
-  display: none;
+// ==========================================================================
+// ==========================================================================
+// =========== MEDIA QUERIES ================================================
+@media only screen and (max-width: 1080px) {
+  html {
+    font-size: 14px;
+  }
+
+  // ============= MAIN CARD ==============
+  .card {
+    margin: 26vw 0 0 0;
+    width: clamp(300px, 80%, 40em);
+    top: 30px;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  // =============== FAQ SIDE ==============
+  .card__questions {
+    margin: 0 auto;
+    width: clamp(280px, 80%, 400px);
+    padding: 0 1em 1em 1em;
+    h1 {
+      text-align: center;
+      margin: 0.3em;
+    }
+  }
+
+  .question-tab {
+    max-height: 4em;
+    p {
+      line-height: 1.5;
+      font-size: clamp(0.8rem, 2.5vw, 1rem);
+      max-width: 50ch;
+      text-align: center;
+      margin: 0 auto 1em 1vw;
+      width: 90%;
+    }
+  }
+
+  .question {
+    margin: 0;
+    h3 {
+      margin: 1em 0;
+      line-height: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .opened {
+    svg {
+      top: 3.5em !important;
+    }
+  }
+  // ========= ILLUSTRATION SIDE =========
+  .card__illustration {
+    max-height: 12vh;
+  }
 }
 
-.arrow-down {
-  position: absolute;
-  right: 20px;
-  width: auto;
-  height: 8px;
-}
-
-@import './queries';
+@import './partials/illustrations.scss';
