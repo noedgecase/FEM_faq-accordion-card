@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./demo.gif)
+![](./preview.gif)
 
 ### Links
 
