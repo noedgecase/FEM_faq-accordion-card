@@ -15,6 +15,7 @@ $softRed: hsl(14, 88%, 65%);
 
 html {
   font-size: 16px;
+  background: rgb(101, 101, 231);
 }
 
 main {
@@ -26,7 +27,6 @@ main {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgb(101, 101, 231);
   background: -moz-linear-gradient(
     0deg,
     rgba(101, 101, 231, 1) 0%,

@@ -7,6 +7,7 @@
 
 html {
   font-size: 16px;
+  background: #6565e7;
 }
 
 main {
@@ -18,7 +19,6 @@ main {
   bottom: 0;
   right: 0;
   left: 0;
-  background: #6565e7;
   background: -moz-linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
   background: -webkit-linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
   background: linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
